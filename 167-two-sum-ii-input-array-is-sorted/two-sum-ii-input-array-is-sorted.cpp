@@ -9,9 +9,7 @@ public:
         while(left < right){
             int sum = numbers[left] + numbers[right];
             if(sum == target){
-                v.push_back(left+1);
-                v.push_back(right+1);
-                return v;
+                return {left + 1, right + 1};
             } else if(sum > target ){
                 right--;
             } else{
@@ -19,6 +17,6 @@ public:
             }
         }
 
-        return v;
+        return {};
     }
 };
